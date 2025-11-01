@@ -1,7 +1,5 @@
 # 🔐 Vault Locker (Solana Devnet)
 
-![All tests passed - initiate vault , deposit , lock & unlock .](image.png)
-
 ## ✅ Overview
 This project demonstrates a complete on-chain vault system using Anchor on Solana Devnet — covering:
 - Vault initialization  
