@@ -1,48 +1,51 @@
-![deployed to devnet](image.png)
-
-Solana NFT Escrow Program
+# Solana NFT Escrow Program
 
 A simple NFT escrow program built with Anchor.
 
 This program allows a Maker to deposit an NFT into a secure vault and set a price in a specific SPL token. A Taker can then accept this offer by paying the set amount, which automatically transfers the NFT to them and the payment to the Maker.
 
-Features
+## Features
 
-Make Offer: Deposit an NFT into escrow.
+- **Make Offer**: Deposit an NFT into escrow
+- **Take Offer**: Pay to receive the NFT, completing the trade  
+- **Cancel Offer**: The original maker can cancel their offer at any time to reclaim their NFT
 
-Take Offer: Pay to receive the NFT, completing the trade.
+## Deployment
 
-Cancel Offer: The original maker can cancel their offer at any time to reclaim their NFT.
+![deployed to devnet](image.png)
 
-Testing
+**Program ID**: `9QAQvv6ritDHHTcctxYnPdBgPXb7G3bZeTWkZYdg1moJ`
 
-The program was fully tested on localnet using the anchor test framework. All 4 tests passed, covering the make_offer, take_offer, and cancel_offer instructions, as well as error handling.
+**Devnet Deployment Signature**: `3fKjb9kGmuStsTR2BATpgmgMr91kqUN6JhoXdaXJDpxg4ULfJz2FLtMTwMKv4uxr2kLTmjoccaDs8SJ3dmvixqXw`
 
-  NFT Escrow Tests
+## Testing
 
-  Make Offer
-    ✔ Should successfully create an NFT offer (2332ms)
-    ✔ Should fail when token amount is zero (1408ms)
+The program was fully tested on localnet using the anchor test framework. All 4 tests passed, covering the `make_offer`, `take_offer`, and `cancel_offer` instructions, as well as error handling.
 
-  Take Offer
-    ✔ Should successfully take an NFT offer (1844ms)
+Testing was performed on localnet due to Devnet faucet issues (server request failed to get airdrop).
 
-  Cancel Offer
-    ✔ Should successfully cancel an NFT offer and return NFT (2329ms)
+### Test Results
 
-  4 passing (9s)
+```
+NFT Escrow Tests
 
+Make Offer
+  ✔ Should successfully create an NFT offer (2332ms)
+  ✔ Should fail when token amount is zero (1408ms)
 
-Deployment
+Take Offer
+  ✔ Should successfully take an NFT offer (1844ms)
 
-This program was deployed to Devnet. Testing was performed on localnet due to Devnet faucet issues (server request failed to get airdrop).
+Cancel Offer
+  ✔ Should successfully cancel an NFT offer and return NFT (2329ms)
 
-Program ID: 9QAQvv6ritDHHTcctxYnPdBgPXb7G3bZeTWkZYdg1moJ
+4 passing (9s)
+```
 
-Devnet Deployment Signature: 3fKjb9kGmuStsTR2BATpgmgMr91kqUN6JhoXdaXJDpxg4ULfJz2FLtMTwMKv4uxr2kLTmjoccaDs8SJ3dmvixqXw
+### Example Transaction
 
-Completed Escrow Transaction (Localnet)
+**Completed Escrow Transaction (Localnet)**
 
-This is the transaction hash from a successful take_offer test on localnet, where the Taker paid the SPL tokens and received the NFT.
+This is the transaction hash from a successful `take_offer` test on localnet, where the Taker paid the SPL tokens and received the NFT.
 
-Transaction Hash: 4PsGSURDrduVoCq1oruF32h3MdpG99NqtCcjwCA6g6GRnCEdwcwf8KMJTDeGWRpW8qUFFVoXhozJ4yY2QBjybqhf
+**Transaction Hash**: `4PsGSURDrduVoCq1oruF32h3MdpG99NqtCcjwCA6g6GRnCEdwcwf8KMJTDeGWRpW8qUFFVoXhozJ4yY2QBjybqhf`
