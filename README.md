@@ -22,6 +22,13 @@ Token creation and management utilities.
 - **Status**: ✅ Deployed to Devnet
 - **Tech**: SPL token program, metadata standards
 
+### 🎨 `mint-nft/`
+Automated NFT minting using a Phantom wallet and Metaplex UMI.
+- **Features**: Upload NFT assets & metadata to Irys storage, mint NFTs directly to your wallet
+- **Status**: ✅ Working on Devnet
+- **Tech**: Metaplex UMI, MPL Core, Phantom wallet signer, Irys uploader
+
+
 ## 🚀 Quick Start
 
 Each project directory contains its own:
