@@ -5,36 +5,57 @@ This repository contains three Solana blockchain projects demonstrating differen
 ## 📁 Projects
 
 ### 🔐 `vault-locker/`
+
 A secure vault system for token management with lock/unlock mechanisms.
-- **Features**: Initialize vault, deposit tokens, lock/unlock funds, withdraw tokens
-- **Status**: ✅ Deployed to Devnet
-- **Tech**: Anchor framework, SPL tokens
+
+* **Features**: Initialize vault, deposit tokens, lock/unlock funds, withdraw tokens
+* **Status**: ✅ Deployed to Devnet
+* **Tech**: Anchor framework, SPL tokens
 
 ### 💰 `nft_escrow/`
+
 NFT trading platform with secure escrow functionality.
-- **Features**: Create NFT offers, accept offers, cancel listings
-- **Status**: ✅ Deployed to Devnet  
-- **Tech**: Anchor framework, NFT handling, SPL token payments
+
+* **Features**: Create NFT offers, accept offers, cancel listings
+* **Status**: ✅ Deployed to Devnet
+* **Tech**: Anchor framework, NFT handling, SPL token payments
 
 ### 🪙 `mint-token/`
+
 Token creation and management utilities.
-- **Features**: Mint custom SPL tokens, token metadata management
-- **Status**: ✅ Deployed to Devnet
-- **Tech**: SPL token program, metadata standards
+
+* **Features**: Mint custom SPL tokens, token metadata management
+* **Status**: ✅ Deployed to Devnet
+* **Tech**: SPL token program, metadata standards
 
 ### 🎨 `mint-nft/`
-Automated NFT minting using a Phantom wallet and Metaplex UMI.
-- **Features**: Upload NFT assets & metadata to Irys storage, mint NFTs directly to your wallet
-- **Status**: ✅ Working on Devnet
-- **Tech**: Metaplex UMI, MPL Core, Phantom wallet signer, Irys uploader
 
+Automated NFT minting using a Phantom wallet and Metaplex UMI.
+
+* **Features**: Upload NFT assets & metadata to Irys storage, mint NFTs directly to your wallet
+* **Status**: ✅ Working on Devnet
+* **Tech**: Metaplex UMI, MPL Core, Phantom wallet signer, Irys uploader
 
 ## 🚀 Quick Start
 
 Each project directory contains its own:
-- `README.md` - Detailed project documentation
-- `Anchor.toml` - Configuration and program IDs
-- `tests/` - Test suites for all functionality
-- `programs/` - On-chain Solana programs
+
+* `README.md` - Detailed project documentation
+* `Anchor.toml` - Configuration and program IDs
+* `tests/` - Test suites for all functionality
+* `programs/` - On-chain Solana programs
 
 Navigate to individual project folders for specific setup and usage instructions.
+
+### 🛒 `marketplace/`
+
+A unified space combining minting and escrow-based NFT transfers.
+
+* **Includes**: `mint-nft` and `nft_escrow` modules
+* **Purpose**: End-to-end marketplace workflow
+
+  * Mint NFTs using the provided minting utilities
+  * Transfer NFTs securely via the escrow program
+* **Status**: 🏗 Integration and full E2E testing in progress
+
+
